@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Another e-Candyshop</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="#" class="logo">Candy<span>.</span></a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#products">products</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="loginandreg.html" class="fas fa-user"></a>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Just Another e-Candyshop</h3>
+        <span> Homemade candy and chocolates </span>
+        <p>Come for the candy. Stay for the experience</p>
+        <p>A sweet treat for a sweet tooth</p>
+        <a href="#products" class="btn">shop now</a>
+    </div>
+    
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span> about </span> us </h1>
+
+    <div class="row">
+
+        <div class="video-container">
+            <video src="images/about-vid.mp4" loop autoplay muted></video>
+            <h3>Best Candy in Singapore!</h3>
+        </div>
+
+        <div class="content">
+            <h3>why choose us?</h3>
+            <p>This charming candy store, which was opened in 2022, is the newest continuously running confectionery in Singapore. In 2021, Stephanie and Jia Hui took over the business and got to work restoring the building, which features stained glass, carved wood, and curved windows. Sweets are made on-site and include classic favorites such as buttercreams, clear toy candy, and penny candy, as well as modern treats including Gianduja and Chocolate Truffle.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- products section starts  -->
+
+<section class="about" id="about">
+    <form method="get" action="http://localhost:9999/ecandyshop/query">
+
+    <h1 class="heading"> <span> Categories </h1>
+
+    <div class="row">
+
+        <div class="content">
+            <h3>Categories:</h3>
+            <p> 
+                <input type="checkbox" name="subtype" value="gummy" />Gummy
+                 <input type="checkbox" name="subtype" value="Hard candy" />Hard Candy 
+                 <input type="checkbox" name="subtype" value="soft candy" />Soft Candy
+                <input type="checkbox" name="subtype" value="Purely chocolate" />Purely Chocolate
+                <input type="checkbox" name="subtype" value="truffle chocolates" />Truffle Chocolates
+                <input type="checkbox" name="subtype" value="chocolate bars" />Chocolate Bars
+               <input type="checkbox" name="subtype" value="other chocolate" />Other Chocolates
+                <br /><br />
+                Choose a price range:
+                <input type="radio" name="price" value="5" checked />less than $6
+                <input type="radio" name="price" value="10" />less than $15
+                <input type="radio" name="price" value="100" />less than $20
+                <br /><br />
+                <input type="submit" value="Search" />
+                <input type="reset" value="Clear" />
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="products" id="products">
+
+    <h1 class="heading"> Our <span>Candies</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/1.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Assorted fruit gummy</h3>
+                <div class="price"> $5.90/ 180g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/2.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Gummy Worm</h3>
+                <div class="price"> $5.90/ 180g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/3.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Sour gummy worm</h3>
+                <div class="price"> $5.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/4.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Corn gummy</h3>
+                <div class="price"> $5.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/5.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Gummy bear</h3>
+                <div class="price"> $5.90/ 200g </div>
+            </div>
+        
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/6.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Sour rainbow candy</h3>
+                <div class="price"> $5.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/7.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Rock candy sticks</h3>
+                <div class="price"> $6.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/8.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Candy cane</h3>
+                <div class="price"> $6.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/9.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Lollipops</h3>
+                <div class="price"> $6.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/10.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Assorted fruit rock candy</h3>
+                <div class="price"> $6.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/11.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Star candy konpeito</h3>
+                <div class="price"> $6.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/12.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Jelly beans</h3>
+                <div class="price"> $5.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/13.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Cotton candy</h3>
+                <div class="price"> $4.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/14.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Assorted hard fruit candy</h3>
+                <div class="price"> $6.90/ 200g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/15.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Mint Candy</h3>
+                <div class="price"> $6.90/ 200g </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- prodcuts section ends -->
+
+<!-- products section starts  -->
+<section class="products" id="products">
+
+    <h1 class="heading"> Our <span>Chocolates</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/16.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Dark chocolate</h3>
+                <div class="price"> $7.90/ 280g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/17.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Milk chocolate</h3>
+                <div class="price"> $7.90/ 280g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/18.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>White chocolate</h3>
+                <div class="price"> $7.90/ 280g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/19.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Ruby chocolate</h3>
+                <div class="price"> $7.90/ 280g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/20.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Nama chocolate (Milk)</h3>
+                <div class="price"> $15.90/ 160g </div>
+            </div>
+        
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/21.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Nama chocolate (White)</h3>
+                <div class="price"> $15.90/ 160g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/22.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Nama chocolate (Matcha)</h3>
+                <div class="price"> $15.90/ 160g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/23.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Chocolate truffle</h3>
+                <div class="price"> $15.90/ 160g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/24.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Liqeour chocolate</h3>
+                <div class="price"> $19.90/ 160g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/25.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Assorted chocolate</h3>
+                <div class="price"> $$14.90/ 230g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/26.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Nanaimo bars</h3>
+                <div class="price"> $9.90/ 230g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/27.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Chocolate peanut butter bars</h3>
+                <div class="price"> $9.90/ 230g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/28.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Sea salt chocolate almond clusters</h3>
+                <div class="price"> $14.90/ 230g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/29.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Hazelnut chocolate</h3>
+                <div class="price"> $14.90/ 230g </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/30.jpg" alt="">
+                <div class="icons">
+                    <a href="cart.html" class="cart-btn">BUY NOW</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Gianduja</h3>
+                <div class="price"> $14.90/ 230g </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- prodcuts section ends -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <img src="images/icon-1.png" alt="">
+        <div class="info">
+            <h3>free delivery</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-2.png" alt="">
+        <div class="info">
+            <h3>10 days returns</h3>
+            <span>moneyback guarantee</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-3.png" alt="">
+        <div class="info">
+            <h3>offer & gifts</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-4.png" alt="">
+        <div class="info">
+            <h3>secure paymens</h3>
+            <span>protected by paypal</span>
+        </div>
+    </div>
+   
+</section>
+
+<!-- icons section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+<h1 class="heading"> customer's <span>review</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>The mint candy is definately one of the best out there! Love the strong mint scent in my mouth which awakens me. Mint also does not dissove or melt easily, which enables it to last longer for me.</p>
+        <div class="user">
+            <img src="images/pic-1.png" alt="">
+            <div class="user-info">
+                <h3>Thoma</h3>
+                <span>Verified customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Loving this chocolate. Great texture and flavor, easy to work with, quality you can see and taste , my favorite part is the ingredients, no sugar added, no soy lecithin just beautiful organic cacao and coco butter , coconut sugar. I will order again for sure.</p>
+        <div class="user">
+            <img src="images/pic-2.png" alt="">
+            <div class="user-info">
+                <h3>Louis</h3>
+                <span>Verified customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Fresh chocolate matters! This is my second time shopping at Just Another e-Candyshop and I’ll be back as soon as I chomp my way through the last batch! The free shipping option encouraged me to buy a nice supply and it was worth it!</p>
+        <div class="user">
+            <img src="images/pic-3.png" alt="">
+            <div class="user-info">
+                <h3>Smith</h3>
+                <span>Verified customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+</div>
+    
+</section>
+
+<!-- review section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <nav class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#products">products</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="loginandreg.html">my account</a>
+            <a href="cart.html">my order</a>
+        </div>
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">Singapore</a>
+            <a href="#">USA</a>
+            <a href="#">japan</a>
+            <a href="#">france</a>
+        </div>
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#">+65-98765432</a>
+            <a href="#">IM2073@gmail.com</a>
+            <a href="#">Singapore - 000000</a>
+            <img src="images/payment.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span> Jiahui & Stephanie </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+</form>    
+</body>
+</html>
