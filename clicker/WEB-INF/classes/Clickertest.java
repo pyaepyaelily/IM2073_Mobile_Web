@@ -36,12 +36,34 @@ public class Clickertest extends HttpServlet {
             // Step 3: Execute a SQL SELECT query
             String option = request.getParameter("option");
             String qnsID = request.getParameter("qnsID");
-            String sqlStr = "INSERT INTO responsetable (qnsID, response, studentID) VALUES (' " + qnsID + "'" + ",'" + option + "' , 1)";
-            out.println("<p>" + sqlStr + "</p>"); // for debugging
+            String sqlStr = "INSERT INTO responsetable (qnsID, response, studentID) VALUES (" + qnsID + "" + ",'" + option + "' , 1)";
+            // out.println("<p>" + sqlStr + "</p>"); // for debugging
             int count = 0;
             count = stmt.executeUpdate(sqlStr);
 
             out.println("<h3>Thank you for your query.</h3>");
+
+
+            int rsCount = 0;
+            String sqlStr1 = "select * from qnstable where qnsID = " + qnsID + " AND answer LIKE '" + option + "%' " ;
+            boolean results = stmt.execute(sqlStr1);
+            ResultSet rset = stmt.executeQuery(sqlStr1); // Send the query to the server
+
+            if (!rset.isBeforeFirst() ) {    
+                out.println("<h3>Sorry you got it wrong. Please proceed to next question.</h3>");
+            } 
+            else{
+                out.println("<h3>Good job! Please proceed to next question.</h3>");
+            }
+
+
+            // if (results == true){
+            //     out.println("<h3>Good job! Please proceed to next question.</h3>");
+            // }
+            // else{
+            //     out.println("<h3>Sorry you got it wrong. Please proceed to next question.</h3>");
+            // }
+
 
         } catch (Exception ex) {
             out.println("<p>Error: " + ex.getMessage() + "</p>");
