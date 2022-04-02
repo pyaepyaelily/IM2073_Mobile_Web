@@ -35,7 +35,8 @@ public class Clickertest extends HttpServlet {
                 Statement stmt = conn.createStatement();) {
             // Step 3: Execute a SQL SELECT query
             String option = request.getParameter("option");
-            String sqlStr = "INSERT INTO responsetable (qnsID, response, studentID) VALUES ( 1,'" + option + "',1)";
+            String qnsID = request.getParameter("qnsID");
+            String sqlStr = "INSERT INTO responsetable (qnsID, response, studentID) VALUES (' " + qnsID + "'" + ",'" + option + "' , 1)";
             out.println("<p>" + sqlStr + "</p>"); // for debugging
             int count = 0;
             count = stmt.executeUpdate(sqlStr);
