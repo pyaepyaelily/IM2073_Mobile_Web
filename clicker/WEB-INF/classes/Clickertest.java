@@ -42,7 +42,7 @@ public class Clickertest extends HttpServlet {
             int count = 0;
             count = stmt.executeUpdate(sqlStr);
 
-            out.println("<h3>Thank you for your query.</h3>");
+            // out.println("<h3>Thank you for your query.</h3>");
 
             int rsCount = 0;
             String sqlStr1 = "select * from qnstable where qnsID = " + qnsID + " AND answer LIKE '" + option + "%' ";
