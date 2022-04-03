@@ -4,12 +4,14 @@ import java.sql.*;
 import jakarta.servlet.*;            // Tomcat 10
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import javax.swing.*; 
 //import javax.servlet.*;            // Tomcat 9
 //import javax.servlet.http.*;
 //import javax.servlet.annotation.*;
 
 @WebServlet("/display")   // Configure the request URL for this servlet (Tomcat 7/Servlet 3.0 upwards)
 public class stats extends HttpServlet {
+   JFrame f;
 
    // The doGet() runs once per HTTP GET request to this servlet.
    @Override
@@ -42,18 +44,24 @@ public class stats extends HttpServlet {
          String sqlStr = "SELECT * FROM responsetable WHERE qnsID = " + request.getParameter("qnsID");
          out.println("<p>Your SQL statement is: " + sqlStr + "</p>"); // Echo for debugging
          ResultSet rset = stmt.executeQuery(sqlStr);  // Send the query to the server
+         out.println("<p></p>");
+         out.println("<p></p>");
 
          // Step 4: Process the query result set
+         out.println("Question number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;" + "Student ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;" + "Response");
+         out.println("<p>=========================================================</p>");
          int count = 0;
          while(rset.next()) {
-            // Print a paragraph <p>...</p> for each record
-            out.println("<p>"+ "Qns number: " +rset.getInt("qnsID")
-                  + "  Student ID: " + rset.getInt("studentID") 
-                  + "  Response: " + rset.getString("response")
+            // Print a paragraph <p>...</p> for each record 
+            out.println("<p>" +rset.getInt("qnsID") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp; "
+                   + rset.getInt("studentID") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp; "
+                   + rset.getString("response")
                   + "</p>");
-            count++;
+            count++; 
          }
-         out.println("<p>==== " + count + " records found =====</p>");
+         out.println("=========================================================");
+         out.println("<p>====================== " + count + " records found =======================</p>");
+
       } catch(Exception ex) {
          out.println("<p>Error: " + ex.getMessage() + "</p>");
          out.println("<p>Check Tomcat console for details.</p>");

@@ -15,8 +15,7 @@ function updateCountdown(){
 
 }
 */
-
-let time = 2 * 60; //minutes * 60 seconds
+let time = 60; //minutes * 60 seconds
 let refreshIntervalId = setInterval(updateCountdown, 1200); //update every 1 second
 
 const countdownEl = document.getElementById('countdown'); 
@@ -31,6 +30,6 @@ function updateCountdown() {
     time--;
 
     if (time < 0) { //stop the setInterval whe time = 0 for avoid negative time
-    clearInterval(refreshIntervalId);
+        window.location.href = "mathqns1.html";
 	}
 }
