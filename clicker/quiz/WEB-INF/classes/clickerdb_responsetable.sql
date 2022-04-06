@@ -25,14 +25,14 @@ DROP TABLE IF EXISTS `responsetable`;
 CREATE TABLE `responsetable` (
   `responseID` int NOT NULL AUTO_INCREMENT,
   `qnsID` int DEFAULT NULL,
-  `response` varchar(15) DEFAULT NULL,
+  `response` varchar(5) DEFAULT NULL,
   `studentID` int DEFAULT NULL,
   PRIMARY KEY (`responseID`),
   KEY `qnsID` (`qnsID`),
   KEY `studentID` (`studentID`),
   CONSTRAINT `responsetable_ibfk_1` FOREIGN KEY (`qnsID`) REFERENCES `qnstable` (`qnsID`),
   CONSTRAINT `responsetable_ibfk_2` FOREIGN KEY (`studentID`) REFERENCES `studenttable` (`studentID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=156 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,9 +41,7 @@ CREATE TABLE `responsetable` (
 
 LOCK TABLES `responsetable` WRITE;
 /*!40000 ALTER TABLE `responsetable` DISABLE KEYS */;
-insert into responsetable values (1, 01, 'A. 25.30 ', 1);
-insert into responsetable values (2, 01, 'B. 25.50 ', 2);
-insert into responsetable values (3, 02, 'D. 5002 ', 2);
+INSERT INTO `responsetable` VALUES (1,1,'A',1),(2,1,'B',1),(3,1,'B',1),(4,1,'A',1),(5,1,'B',1),(6,1,'B',1),(7,1,'D',1),(8,1,'C',1),(9,1,'D',1),(10,1,'B',1),(11,1,'C',1),(12,1,'A',1),(13,1,'B',1),(14,1,'A',1),(17,1,'C',1),(19,1,'A',1),(20,2,'B',1),(21,1,'A',1),(22,2,'B',1),(23,3,'C',1),(25,1,'A',1),(26,2,'B',1),(27,3,'C',1),(28,4,'D',1),(29,5,'A',1),(30,NULL,'A',1),(31,1,'A',1),(32,2,'C',1),(33,1,'C',1),(34,1,'D',1),(35,1,'D',1),(36,1,'C',1),(37,2,'B',1),(38,3,'D',1),(39,1,'D',1),(40,1,'D',1),(41,2,'A',1),(42,1,'C',1),(43,1,'C',1),(44,1,'D',1),(45,1,'B',1),(46,2,'C',1),(47,1,'D',1),(48,1,'C',1),(49,3,'C',1),(50,4,'A',1),(51,5,'D',1),(52,1,'A',1),(53,2,'B',1),(54,3,'D',1),(55,1,'A',1),(56,2,'B',1),(57,1,'A',1),(58,2,'B',1),(59,3,'C',1),(60,4,'D',1),(61,5,'D',1),(62,1,'A',1),(63,2,'B',1),(64,3,'C',1),(65,4,'B',1),(66,5,'D',1),(67,1,'A',1),(68,2,'B',1),(69,3,'D',1),(70,4,'C',1),(71,5,'A',1),(72,1,'B',1),(73,2,'B',1),(74,3,'D',1),(75,4,'C',1),(76,5,'A',1),(77,1,'B',1),(78,2,'C',1),(79,3,'D',1),(80,4,'A',1),(81,5,'B',1),(82,1,'B',1),(83,2,'A',1),(84,3,'C',1),(85,4,'A',1),(86,5,'D',1),(87,1,'B',1),(88,2,'B',1),(89,3,'C',1),(90,4,'A',1),(91,5,'D',1),(92,1,'B',1),(93,2,'B',1),(94,3,'C',1),(95,4,'D',1),(96,5,'A',1),(97,1,'B',1),(98,2,'B',1),(99,3,'C',1),(100,4,'A',1),(101,5,'D',1),(102,1,'B',1),(103,2,'B',1),(104,3,'A',1),(105,4,'C',1),(106,5,'D',1),(107,1,'B',1),(108,2,'B',1),(109,3,'C',1),(110,4,'A',1),(111,5,'D',1),(112,1,'B',1),(113,2,'A',1),(114,3,'C',1),(115,4,'D',1),(116,5,'A',1),(117,1,'B',1),(118,2,'B',1),(119,3,'C',1),(120,4,'D',1),(121,5,'A',1),(122,1,'B',1),(123,2,'B',1),(124,3,'C',1),(125,4,'D',1),(126,5,'A',1),(127,1,'D',1),(128,2,'B',1),(129,3,'A',1),(130,4,'B',1),(131,5,'C',1),(132,1,'B',1),(133,2,'A',1),(134,3,'C',1),(135,4,'D',1),(136,5,'A',1),(137,1,'B',1),(138,2,'C',1),(139,3,'A',1),(140,4,'D',1),(141,5,'B',1),(142,5,'B',1),(143,1,'B',1),(144,2,'B',1),(145,3,'C',1),(146,4,'A',1),(147,5,'D',1),(148,1,'B',1),(149,2,'C',1),(150,3,'A',1),(151,1,'B',1),(152,2,'B',1),(153,3,'C',1),(154,4,'D',1),(155,5,'A',1);
 /*!40000 ALTER TABLE `responsetable` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-26 20:59:03
+-- Dump completed on 2022-04-06 15:07:16

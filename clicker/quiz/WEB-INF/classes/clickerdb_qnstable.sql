@@ -32,7 +32,7 @@ CREATE TABLE `qnstable` (
   `choice4` varchar(45) NOT NULL,
   `answer` varchar(45) NOT NULL,
   PRIMARY KEY (`qnsID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,18 +41,7 @@ CREATE TABLE `qnstable` (
 
 LOCK TABLES `qnstable` WRITE;
 /*!40000 ALTER TABLE `qnstable` DISABLE KEYS */;
-/*INSERT INTO `qnstable` VALUES (1,'Question 1. The average of first 50 natural numbers is: '','25.30','25.5','25.00','12.25','math'),(2,'The number of 3-digit numbers divisible by 6, is','149','166','150','151','math'),(3,' 106 × 106 – 94 × 94 =','2004','2400','1904','1906','math');*/
-insert into qnstable values (01, 'Math', 'Question 1. The average of first 50 natural numbers is: ', 'A. 25.30 ', 'B. 25.50', 'C. 25.00', 'D. 12.25', 'B. 25.50');
-insert into qnstable values (02, 'Math', 'Question 2. What is 1004 divided by 2? ', 'A. 522 ', 'B. 502', 'C. 520', 'D. 5002', 'B. 502');
-insert into qnstable values (03, 'Math', 'Question 3. A clock strikes once at 1 o’clock, twice at 2 o’clock, thrice at 3 o’clock and so on. How many times will it strike in 24 hours? ', 'A. 78 ', 'B. 136', 'C. 156', 'D. 5196', 'C. 156');
-insert into qnstable values (04, 'Math', 'Question 4. 106 × 106 – 94 × 94 = ? ', 'A. 2004 ', 'B. 2400', 'C. 1904', 'D. 1906', 'B. 2004');
-insert into qnstable values (05, 'Math', 'Question 5. Which of the following numbers gives 240 when added to its own square? ', 'A. 15 ', 'B. 16', 'C. 18', 'D. 20', 'A. 15');
-
-insert into qnstable values (06, 'Science', 'Question 1. Among Ferns, Mosses, Algae & Fungi , cholorophyll is found in?', 'A. Algae & Ferns ', 'B. Algae & Mosses', 'C. Algae, Ferns & Mosses', 'D. None of the above', 'C. Algae, Ferns & Mosses');
-insert into qnstable values (07, 'Science', 'Question 2. Which of the following is a micronutrient that helps in nitrogen metabolism of plants? ', 'A. Zinc ', 'B. Copper', 'C. Molybdenum', 'D. Sulphur', 'C. Molybdenum');
-insert into qnstable values (08, 'Science', 'Question 3. Which of the following is not a variety of mango? ', 'A. Banganapalle', 'B. Alphonso', 'C. Sindhoora', 'D. Red Dacca', 'D. Red Dacca');
-insert into qnstable values (09, 'Science', 'Question 4. Memory loss would most likely be due to a malfunction of which part of the brain?', 'A. Medulla', 'B. Cerebellum', 'C. Cerebrum', 'D. Pons', 'C. Cerebrum');
-insert into qnstable values (10, 'Science', 'Question 5. Which of the following diseases is spread by mosquitoes but is not a viral disease?', 'A. Meningitis', 'B. Dengue fever', 'C. Yellow fever', 'D. Filariasis', 'D. Filariasis');
+INSERT INTO `qnstable` VALUES (1,'Math','Question 1. The average of first 50 natural numbers is: ','A. 25.30 ','B. 25.50','C. 25.00','D. 12.25','B. 25.50'),(2,'Math','Question 2. What is 1004 divided by 2? ','A. 522 ','B. 502','C. 520','D. 5002','B. 502'),(3,'Math','Question 3. A clock strikes once at 1 o’clock, twice at 2 o’clock, thrice at 3 o’clock and so on. How many times will it strike in 24 hours? ','A. 78 ','B. 136','C. 156','D. 5196','C. 156'),(4,'Math','Question 4. 106 × 106 – 94 × 94 = ? ','A. 2004 ','B. 2400','C. 1904','D. 1906','B. 2004'),(5,'Math','Question 5. Which of the following numbers gives 240 when added to its own square? ','A. 15 ','B. 16','C. 18','D. 20','A. 15'),(6,'Science','Question 1. Among Ferns, Mosses, Algae & Fungi , cholorophyll is found in?','A. Algae & Ferns ','B. Algae & Mosses','C. Algae, Ferns & Mosses','D. None of the above','C. Algae, Ferns & Mosses'),(7,'Science','Question 2. Which of the following is a micronutrient that helps in nitrogen metabolism of plants? ','A. Zinc ','B. Copper','C. Molybdenum','D. Sulphur','C. Molybdenum'),(8,'Science','Question 3. Which of the following is not a variety of mango? ','A. Banganapalle','B. Alphonso','C. Sindhoora','D. Red Dacca','D. Red Dacca'),(9,'Science','Question 4. Memory loss would most likely be due to a malfunction of which part of the brain?','A. Medulla','B. Cerebellum','C. Cerebrum','D. Pons','C. Cerebrum'),(10,'Science','Question 5. Which of the following diseases is spread by mosquitoes but is not a viral disease?','A. Meningitis','B. Dengue fever','C. Yellow fever','D. Filariasis','D. Filariasis');
 /*!40000 ALTER TABLE `qnstable` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -65,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-26 20:59:03
+-- Dump completed on 2022-04-06 15:07:17

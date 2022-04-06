@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `studenttable`;
 CREATE TABLE `studenttable` (
   `studentID` int NOT NULL AUTO_INCREMENT,
   `studentName` varchar(50) DEFAULT NULL,
+  `score` int DEFAULT NULL,
   PRIMARY KEY (`studentID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -35,7 +36,7 @@ CREATE TABLE `studenttable` (
 
 LOCK TABLES `studenttable` WRITE;
 /*!40000 ALTER TABLE `studenttable` DISABLE KEYS */;
-INSERT INTO `studenttable` VALUES (1,'James'),(2,'John'),(3,'Kim');
+INSERT INTO `studenttable` VALUES (1,'James',4),(2,'John',NULL),(3,'Kim',NULL);
 /*!40000 ALTER TABLE `studenttable` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-26 20:59:03
+-- Dump completed on 2022-04-06 15:07:17
