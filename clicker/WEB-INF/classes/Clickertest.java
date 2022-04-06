@@ -23,6 +23,9 @@ public class Clickertest extends HttpServlet {
         out.println("<head><title>Query Response</title></head>");
         out.println("<body>");
 
+        out.write("<link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>");
+
+
         try (
                 // Step 1: Allocate a database 'Connection' object
                 Connection conn = DriverManager.getConnection(
@@ -34,6 +37,11 @@ public class Clickertest extends HttpServlet {
                 // Step 2: Allocate a 'Statement' object in the Connection
                 Statement stmt = conn.createStatement();) {
             // Step 3: Execute a SQL SELECT query
+
+            out.println("<header class='w3-display-container w3-content w3-wide' style='max-width:1500px' id='home'>");
+            out.println("<img class='w3-image' class='w3-opacity' src='https://img.freepik.com/free-photo/light-emerald-green-mint-color-sky-pastel-background_190474-585.jpg?w=996' alt='cloud' width='1500' height='800'>");
+
+
             String option = request.getParameter("option");
             String qnsID = request.getParameter("qnsID");
             String sqlStr = "INSERT INTO responsetable (qnsID, response, studentID) VALUES (" + qnsID + "" + ",'"
@@ -49,8 +57,9 @@ public class Clickertest extends HttpServlet {
             boolean results = stmt.execute(sqlStr1);
             ResultSet rset = stmt.executeQuery(sqlStr1); // Send the query to the server
             
+            out.println("<div class='w3-display-middle w3-margin-top w3-center'>");
             if (!rset.isBeforeFirst()) {
-                out.println("<h3>Sorry you got it wrong. Please proceed to next question.</h3>");
+                out.println("<h3>Sorry you got it wrong. Please proceed to next question.</h3");
             } else {
                 score = score + 1;
                 out.println("<h3>Good job! Please proceed to next question.</h3>");
@@ -68,6 +77,8 @@ public class Clickertest extends HttpServlet {
             // out.println("<h3>Sorry you got it wrong. Please proceed to next
             // question.</h3>");
             // }
+            out.println("</div>");
+            out.println("</header>");
 
         } catch (Exception ex) {
             out.println("<p>Error: " + ex.getMessage() + "</p>");
