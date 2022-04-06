@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'winkle';
+    src: url(winkle.tff) format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root{
     --pink:#FC94AF;
 }
@@ -5,7 +13,7 @@
 *{
     margin:0; padding:0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: winkle, sans-serif;
     outline: none; border:none;
     text-decoration: none;
     transition: .2s linear;
@@ -23,6 +31,7 @@ section{
 }
 
 .heading{
+    font-family: "winkle";
     text-align: center;
     font-size: 4rem;
     color:#333;
@@ -32,6 +41,7 @@ section{
 }
 
 .heading span{
+    font-family: "winkle";
     color:var(--pink);
 }
 
@@ -43,7 +53,7 @@ section{
     color:#655967;
     padding:.9rem 3.5rem;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 
 .countdown{
@@ -103,6 +113,7 @@ header #toggler{
 }
 
 header .fa-bars{
+    font-family: "winkle", sans-serif;
     font-size: 3rem;
     color:#333;
     border-radius: .5rem;
@@ -116,7 +127,7 @@ header .fa-bars{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background:url(../images/takokunbg.png) no-repeat;
+    background:url(../images/takoacads.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -125,20 +136,23 @@ header .fa-bars{
     max-width: 160rem;
 }
 
-.home .content h3{
-    font-size: 5rem;
+.home .content h1{
+    font-family: "winkle", sans-serif;
+    font-size: 9rem;
     color:#333;
 }
 
 .home .content span{
-    font-size: 2rem;
+    font-family: "winkle", sans-serif;
+    font-size: 4rem;
     color:#999;
     padding:1rem 0;
     line-height: 1.5;
 }
 
-.home .content p{
-    font-size: 4rem;
+.home .content h5{
+    font-family: "winkle", sans-serif;
+    font-size: 3rem;
     color:#333;
     padding:1rem 0;
     line-height: 1.5;
@@ -332,12 +346,19 @@ header .fa-bars{
         display: block;
     }
 
-    .home .content h3{
-        font-size: 5rem;
+    .home .content h1{
+        font-family: "winkleregular", sans-serif;
+        font-size: 9rem;
     }
 
     .home .content span{
-        font-size: 2.5rem;
+        font-family: "winkleregular", sans-serif;
+        font-size: 4rem;
+    }
+
+    .home .content h5{
+        font-family: "winkleregular", sans-serif;
+        font-size: 3rem;
     }
 
     .icons-container .icons h3{
