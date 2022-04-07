@@ -30,6 +30,9 @@ public class statisticResponse extends HttpServlet {
       // out.write(
       // " <script
       // src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\"></script>\r\n");
+
+      out.write("<link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>");
+
       try (
             // Step 1: Allocate a database 'Connection' object
             Connection conn = DriverManager.getConnection(
@@ -40,6 +43,10 @@ public class statisticResponse extends HttpServlet {
 
             // Step 2: Allocate a 'Statement' object in the Connection
             Statement stmt = conn.createStatement();) {
+
+
+         // out.println("<img class='w3-image' class='w3-opacity' src='https://images.unsplash.com/photo-1529697216570-f48ef8f6b2dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt='cloud' width='1500' height='800'>");
+
          String qnsID = request.getParameter("qnsID");
 
          String sqlStrA = "select * from responsetable where qnsID = " + qnsID + " AND response = 'A'";
@@ -73,7 +80,14 @@ public class statisticResponse extends HttpServlet {
             countD++;
          }
          // out.println("<p>countD =" + countD + "</p>");
-         out.println("<h3 style='text-align: center;' >Visualization of response to question" + qnsID + "</h3>");
+         out.println("<div class='w3-display-container w3-hover-opacity'>");
+         out.println("<img class='w3-image' class='w3-opacity' src='https://images.unsplash.com/photo-1529697216570-f48ef8f6b2dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt='cloud' width='1500' height='800'>");
+
+         out.println("<div class='w3-display-middle'>");
+         // out.println("<img class='w3-image' class='w3-opacity' src='https://images.unsplash.com/photo-1529697216570-f48ef8f6b2dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt='cloud' width='1500' height='800'>");
+         out.println("<h1 style='text-align: center;' >Visualization of response to Question " + qnsID + "</h1>");
+         // out.println("<div class='w3-display-container w3-hover-opacity'>");
+         // out.println("<div class='w3-display-middle'>");
          out.println("<script type=\"text/javascript\">");
          // out.println("alert('Added to cart!');");
          // Load the Visualization API and the corechart package.
@@ -116,6 +130,8 @@ public class statisticResponse extends HttpServlet {
          out.println("<td><div id='barchart_div' style='border: 1px solid #ccc; text-align: center;'></div></td>");
          out.println("</tr>");
          out.println("</table>");
+         out.println("</div>");
+         out.println("</div>");
 
       } catch (Exception ex) {
          out.println("<p>Error: " + ex.getMessage() + "</p>");
